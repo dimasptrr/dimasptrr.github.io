@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Farming Dashboard</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .sensor-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        padding-left: 15px;
+        height: 120px;
+      }
+      .sensor-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        border-radius: 2px;
+      }
+      .sensor-title {
+        font-size: 0.8rem;
+        color: #6c757d;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .sensor-value {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 5px 0;
+      }
+      .sensor-unit {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-left: 5px;
+      }
+      .progress-thin {
+        height: 4px;
+        margin-top: 10px;
+      }
+      .line-blue {
+        background-color: #17a2b8;
+      }
+      .line-green {
+        background-color: #28a745;
+      }
+      .line-yellow {
+        background-color: #ffc107;
+      }
+      .line-red {
+        background-color: #dc3545;
+      }
+      .line-gray {
+        background-color: #6c757d;
+      }
+      .text-blue {
+        color: #17a2b8;
+      }
+      .text-green {
+        color: #28a745;
+      }
+      .text-yellow {
+        color: #ffc107;
+      }
+      .text-red {
+        color: #dc3545;
+      }
+      .text-gray {
+        color: #6c757d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid p-4">
+      <h1 class="mb-4">Smart Farming</h1>
+
+      <!-- Row 1 - 5 Cards -->
+      <div class="row mb-4">
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-blue"></div>
+            <div class="card-body">
+              <div class="sensor-title">Kelembaban (RH)</div>
+              <div class="sensor-value text-blue">
+                54<span class="sensor-unit">%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-green"></div>
+            <div class="card-body">
+              <div class="sensor-title">TDS</div>
+              <div class="sensor-value text-green">
+                400<span class="sensor-unit">ppm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-blue"></div>
+            <div class="card-body">
+              <div class="sensor-title">Kekeruhan (Turbid)</div>
+              <div class="sensor-value text-blue">
+                18<span class="sensor-unit">NTU</span>
+              </div>
+              <div class="progress progress-thin">
+                <div class="progress-bar bg-info" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-yellow"></div>
+            <div class="card-body">
+              <div class="sensor-title">Temperatur Air (W.Temp)</div>
+              <div class="sensor-value text-yellow">
+                25<span class="sensor-unit">C</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-red"></div>
+            <div class="card-body">
+              <div class="sensor-title">Aliran Air (W.Flow)</div>
+              <div class="sensor-value text-red">34</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 - 5 Cards -->
+      <div class="row">
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-gray"></div>
+            <div class="card-body">
+              <div class="sensor-title">Oksigen Terlarut (Diss.Oxygen)</div>
+              <div class="sensor-value text-gray">
+                10<span class="sensor-unit">ppm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-green"></div>
+            <div class="card-body">
+              <div class="sensor-title">Intensitas Cahaya (Lux)</div>
+              <div class="sensor-value text-green">
+                100<span class="sensor-unit">Lux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-blue"></div>
+            <div class="card-body">
+              <div class="sensor-title">Temperatur Udara (AirTemp)</div>
+              <div class="sensor-value text-blue">
+                34<span class="sensor-unit">C</span>
+              </div>
+              <div class="progress progress-thin">
+                <div class="progress-bar bg-info" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-yellow"></div>
+            <div class="card-body">
+              <div class="sensor-title">EC</div>
+              <div class="sensor-value text-yellow">2</div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card sensor-card">
+            <div class="sensor-line line-red"></div>
+            <div class="card-body">
+              <div class="sensor-title">PH</div>
+              <div class="sensor-value text-red">7.1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
